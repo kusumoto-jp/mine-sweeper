@@ -63,6 +63,19 @@ class ScoresController < ApplicationController
     end
   end
 
+  def easy
+    @scores = Score.where(level: 'easy').order('clear_time DESC')
+    render 'index'
+  end
+
+  def normal
+
+  end
+
+  def hard
+
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_score
