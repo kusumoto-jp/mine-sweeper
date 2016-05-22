@@ -11,24 +11,10 @@
 #
 
 production:
-  app: minesweeper
-  stack: bamboo-ree-1.8.7
-  tag: production/*
-  config:
-    BUNDLE_WITHOUT: "development:test"
-    GOOGLE_ANALYTICS: "UA-12345678-1"
+  app: sg-minesweeper
 
 staging:
-  stack: cedar
-  app: minesweeper-staging
-  config: &default
-    BUNDLE_WITHOUT: "development:test"
-  addons:
-    - pgbackups:auto-week
-    - memcache:5mb
-    - logging:basic
-    - scheduler:standard
+  app: sg-minesweeper-staging
 
 demo:
-  app: minesweeper-demo
-  config: *default
+  app: sg-minesweeper-demo
