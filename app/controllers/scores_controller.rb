@@ -64,16 +64,18 @@ class ScoresController < ApplicationController
   end
 
   def easy
-    @scores = Score.where(level: 'easy').order('clear_time DESC')
+    @scores = Score.where(level: 'easy').order('clear_time ASC')
     render 'index'
   end
 
   def normal
-
+    @scores = Score.where(level: 'normal').order('clear_time ASC')
+    render 'index'
   end
 
   def hard
-
+    @scores = Score.where(level: 'hard').order('clear_time ASC')
+    render 'index'
   end
 
   private
